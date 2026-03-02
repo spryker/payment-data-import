@@ -35,9 +35,6 @@ class PaymentMethodDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testImportImportsPaymentMethods(): void
     {
         //Arrange

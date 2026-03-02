@@ -23,9 +23,6 @@ use Spryker\Zed\PaymentDataImport\Business\PaymentMethodStore\Writer\Step\StoreN
  */
 class PaymentDataImportBusinessFactory extends DataImportBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
     public function getPaymentMethodDataImporter(): DataImporterInterface
     {
         $dataImporter = $this->getCsvDataImporterFromConfig($this->getConfig()->getPaymentMethodDataImporterConfiguration());
@@ -40,9 +37,6 @@ class PaymentDataImportBusinessFactory extends DataImportBusinessFactory
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
     public function getPaymentMethodStoreDataImporter(): DataImporterInterface
     {
         $dataImporter = $this->getCsvDataImporterFromConfig(
@@ -60,41 +54,26 @@ class PaymentDataImportBusinessFactory extends DataImportBusinessFactory
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createPaymentProviderWriterStep(): DataImportStepInterface
     {
         return new PaymentProviderWriterStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createPaymentMethodWriterStep(): DataImportStepInterface
     {
         return new PaymentMethodWriterStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createPaymentMethodKeyToIdPaymentMethodStep(): DataImportStepInterface
     {
         return new PaymentMethodKeyToIdPaymentMethodStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createStoreNameToIdStoreStep(): DataImportStepInterface
     {
         return new StoreNameToIdStoreStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createPaymentMethodStoreWriterStep(): DataImportStepInterface
     {
         return new PaymentMethodStoreWriterStep();

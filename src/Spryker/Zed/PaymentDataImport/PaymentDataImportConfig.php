@@ -46,9 +46,6 @@ class PaymentDataImportConfig extends DataImportConfig
         return $this->buildImporterConfiguration($moduleDataImportDirectory . 'payment_method_store.csv', static::IMPORT_TYPE_PAYMENT_METHOD_STORE);
     }
 
-    /**
-     * @return string
-     */
     protected function getModuleRoot(): string
     {
         $moduleRoot = realpath(

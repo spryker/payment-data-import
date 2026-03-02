@@ -14,11 +14,6 @@ use Spryker\Zed\PaymentDataImport\Business\PaymentMethodStore\Writer\DataSet\Pay
 
 class PaymentMethodStoreWriterStep implements DataImportStepInterface
 {
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         SpyPaymentMethodStoreQuery::create()
